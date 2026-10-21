@@ -1,16 +1,29 @@
 \documentclass[a4paper, 12pt]{article}
+
+% Nhập siêu dữ liệu và cấu hình giao diện (Đồng bộ 100% với Typst)
+\input{metadata}
 \input{style/config}
+\input{style/header_footer}
 
 \begin{document}
 
+% Trang bìa
 \input{style/cover_page}
-\input{style/header_footer}
+
+% Đánh số trang (Bắt đầu từ mục lục)
 \pagenumbering{arabic}
+\setcounter{page}{1}
+
+% Mục lục
 \tableofcontents
 \newpage
 
-\include{chapter/content}
-\newpage
+% Các chương nội dung
+\input{chapter/01_intro}
+\input{chapter/02_summary}
 
-\printbibliography[]
+% Tài liệu tham khảo
+\nocite{*}
+\printbibliography[title={Tài liệu tham khảo}]
+
 \end{document}

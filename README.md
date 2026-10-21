@@ -5,74 +5,93 @@
 [![Format: A4](https://img.shields.io/badge/Format-A4-blue?style=flat-square)](main.pdf)
 [![Institution](https://img.shields.io/badge/Style-HCMUS-00599C?style=flat-square)](https://hcmus.edu.vn)
 
-A clean, modular, and publication-ready academic report template configured in LaTeX. Tailored for coursework, lab reports, and technical theses at VNU-HCM University of Science (HCMUS) with out-of-the-box Vietnamese language and mathematical typesetting support.
-
+A clean, modular, and publication-ready academic report template configured in LaTeX. 100% synchronized in layout, typography, palette, and metadata architecture with the modern Typst report template. Tailored for coursework, term projects, and technical theses at VNU-HCM University of Science (HCMUS) with out-of-the-box Vietnamese language and mathematical typesetting support.
 
 ## Features
 
-- **Modular Layout:** Organized into dedicated style definitions (`style/`) and chapter sources (`chapter/`) for seamless team collaboration.
-- **Vietnamese Language Support:** Built-in font encoding (T5, utf8) configured through the `vietnam` package.
-- **Institutional Cover Page:** TikZ-rendered frame border with institutional logo and formal metadata tables.
+- **Centralized Metadata:** All document and author credentials are decoupled into `metadata.tex`, matching `metadata.typ` 1:1.
+- **Synchronized Visual Design:** Replicates the clean Typst cover page layout, full-bleed border frame, institutional branding, and boxed student credentials block.
+- **Harmonized Color Palette:** Matches Typst theme tokens (`#1E3778` Navy headers, `#677CA6` slate header/footer lines, and `#F7F7F7` syntax blocks).
+- **Vietnamese Language Support:** Built-in font encoding (T5, utf8) configured through standard LaTeX packages.
+- **Modular Structure:** Clean chapter breakdown (`chapter/01_intro.tex`, `chapter/02_summary.tex`) for seamless writing and collaboration.
 - **Reference Management:** Modern citation engine using BibLaTeX with centralized reference storage (`ref.bib`).
-- **Cross-Platform Compatibility:** Tested with TeX Live, MiKTeX, Overleaf, and VS Code LaTeX Workshop.
-
 
 ## Directory Structure
 
 ```text
-Report_Template_LaTeX/
+latex-report-template/
+├── assets/
+│   ├── border.png          # Cover page border asset
+│   ├── logo.png            # Institutional logo
+│   └── preview.png         # Template sample preview
 ├── chapter/
-│   └── content.tex         # Main report contents and sections
+│   ├── 01_intro.tex        # Introduction section
+│   └── 02_summary.tex      # Summary, math, and data tables
 ├── style/
-│   ├── config.tex          # Package imports, font configurations, and hyperref
-│   ├── cover_page.tex      # TikZ cover page template
-│   ├── header_footer.tex   # Fancyhdr header and footer rules
-│   └── logo.png            # Institutional logo
-├── main.tex                # Document root
+│   ├── config.tex          # Package imports, font configurations, and styling
+│   ├── cover_page.tex      # Synchronized 1:1 cover page layout
+│   └── header_footer.tex   # Header and footer rules matching Typst
+├── metadata.tex            # Centralized project and author metadata
+├── main.tex                # Document root entry point
 ├── ref.bib                 # Bibliography entries (BibLaTeX)
 ├── main.pdf                # Pre-compiled sample output
 ├── .gitignore
 └── LICENSE                 # MIT License
 ```
 
-
 ## Getting Started
 
 ### Prerequisites
 
-Install a complete TeX distribution:
+Use with any standard TeX distribution or cloud compiler:
+- **Web (Recommended):** Import this repository directly into [Overleaf](https://www.overleaf.com/).
 - **Windows:** [MiKTeX](https://miktex.org/) or [TeX Live](https://www.tug.org/texlive/)
 - **Linux:** `sudo apt install texlive-full`
 - **macOS:** [MacTeX](https://www.tug.org/mactex/)
-- **Web:** Import this repository directly into [Overleaf](https://www.overleaf.com/).
 
 ### Compilation
 
 Compile using `latexmk` or `pdflatex`:
 
 ```bash
-# Using latexmk (recommended: handles bibliography and references automatically)
+# Using latexmk (recommended: handles bibliography automatically)
 latexmk -pdf main.tex
 
-# Using pdflatex manually (run twice for table of contents update)
+# Using pdflatex manually
 pdflatex main.tex
 biber main
 pdflatex main.tex
 ```
 
+## Configuration
 
-## Customization
+All report parameters are centralized in `metadata.tex`. You do not need to edit layout or formatting files to configure your report:
 
-1. **Cover Page:** Open `style/cover_page.tex` to customize the project title, course name, student credentials, and faculty advisor.
-2. **Body Content:** Add or edit sections inside `chapter/content.tex`.
-3. **References:** Add your BibTeX citations in `ref.bib` and cite them with `\cite{key}`.
+```latex
+% Report Information
+\newcommand{\university}{ĐẠI HỌC QUỐC GIA THÀNH PHỐ HỒ CHÍ MINH \\ TRƯỜNG ĐẠI HỌC KHOA HỌC TỰ NHIÊN}
+\newcommand{\faculty}{KHOA CÔNG NGHỆ THÔNG TIN}
+\newcommand{\department}{[Tên Bộ Môn / Chuyên Ngành]}
+\newcommand{\course}{[Tên Học Phần / Môn Học]}
 
+\newcommand{\projecttitle}{BÁO CÁO MÔN HỌC}
+\newcommand{\projectsubtitle}{[Tên Đề Tài Báo Cáo]}
 
+% Student and Instructor Information
+\newcommand{\classname}{[Lớp sinh hoạt / Mã lớp]}
+\newcommand{\authorname}{[Họ và tên sinh viên]}
+\newcommand{\authorid}{[Mã số sinh viên]}
+\newcommand{\authoremail}{[Địa chỉ email]}
+\newcommand{\instructorname}{[Họ và tên Giảng viên hướng dẫn]}
+
+% Submission Details
+\newcommand{\submissiondate}{Thành phố Hồ Chí Minh, ngày [..] tháng [..] năm [..]}
+```
 
 ## Preview
 
 <p align="center">
-  <img src="assets/preview.png" width="550" alt="Sample Template Preview" />
+  <img src="assets/preview.png" width="700" alt="Sample Template Preview" />
 </p>
 
 ## License
