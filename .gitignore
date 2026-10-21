@@ -1,0 +1,28 @@
+# LaTeX temporary files
+*.aux
+*.log
+*.toc
+*.out
+!main.pdf
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.bbl
+*.bcf
+*.run.xml
+*.blg
+*.nav
+*.snm
+*.vrb
+*.lot
+*.lof
+*.idx
+*.ind
+*.ilg
+
+# Editor/OS temporary files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp

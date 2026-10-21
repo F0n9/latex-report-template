@@ -1,0 +1,72 @@
+\usepackage[utf8]{vietnam}
+\usepackage[utf8]{inputenc}
+\usepackage[vietnamese]{babel}
+\usepackage[T1]{fontenc}
+
+% Fonts and Symbols
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+% Colors and Tables (Load xcolor before tikz to prevent option clashes)
+\usepackage[table,xcdraw,svgnames]{xcolor}
+\usepackage{tabularx}
+\usepackage{makecell}
+\usepackage{supertabular}
+
+% Graphics
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows.meta, positioning}
+\usepackage{float}
+\usepackage{placeins}
+
+% Layout
+\usepackage{geometry}
+\geometry{
+    a4paper,
+    total={170mm,257mm},
+    left=20mm,
+    top=20mm,
+}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{adjustbox}
+
+% Formatting
+\usepackage{titlesec}
+\usepackage{tocloft}
+\usepackage{enumitem}
+\usepackage{csquotes}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,
+    citecolor=blue,
+    urlcolor=blue,
+}
+
+% Code Listings
+\usepackage{listings}
+\lstset{
+  language=C++,
+  basicstyle=\ttfamily\small,
+  numbers=left,
+  numberstyle=\tiny,
+  breaklines=true,
+  breakatwhitespace=true,
+  frame=single
+}
+% minted often requires -shell-escape and Pygments. Commented out for safety.
+% \usepackage{minted}
+
+% Utilities
+\usepackage{lipsum}
+\usepackage{blindtext}
+
+% Bibliography
+\usepackage{biblatex}
+\addbibresource{ref.bib}
+
+% Counters
+\setcounter{tocdepth}{5}
