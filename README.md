@@ -7,7 +7,6 @@
 
 A clean, modular, and publication-ready academic report template configured in LaTeX. Tailored for coursework, lab reports, and technical theses at VNU-HCM University of Science (HCMUS) with out-of-the-box Vietnamese language and mathematical typesetting support.
 
----
 
 ## Features
 
@@ -17,7 +16,6 @@ A clean, modular, and publication-ready academic report template configured in L
 - **Reference Management:** Modern citation engine using BibLaTeX with centralized reference storage (`ref.bib`).
 - **Cross-Platform Compatibility:** Tested with TeX Live, MiKTeX, Overleaf, and VS Code LaTeX Workshop.
 
----
 
 ## Directory Structure
 
@@ -37,7 +35,6 @@ Report_Template_LaTeX/
 └── LICENSE                 # MIT License
 ```
 
----
 
 ## Getting Started
 
@@ -63,7 +60,6 @@ biber main
 pdflatex main.tex
 ```
 
----
 
 ## Customization
 
@@ -71,10 +67,7 @@ pdflatex main.tex
 2. **Body Content:** Add or edit sections inside `chapter/content.tex`.
 3. **References:** Add your BibTeX citations in `ref.bib` and cite them with `\cite{key}`.
 
----
 
-
----
 
 ## Preview
 
