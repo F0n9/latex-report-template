@@ -91,7 +91,7 @@ All report parameters are centralized in `metadata.tex`. You do not need to edit
 ## Preview
 
 <p align="center">
-  <img src="assets/preview.png" width="850" alt="Sample Template Preview" />
+  <img src="assets/preview.png" width="880" alt="Sample Template Preview" />
 </p>
 
 ## License
