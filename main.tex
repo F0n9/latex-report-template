@@ -10,19 +10,19 @@
 % Trang bìa (Không tính số trang)
 \input{style/cover_page}
 
-% Bắt đầu tính số trang từ trang nội dung đầu tiên (Trang 1 / 1)
+% Bắt đầu tính số trang từ trang sau bìa (Mục lục là trang 1)
 \pagenumbering{arabic}
 \setcounter{page}{1}
 
-% Mục lục (Bỏ comment nếu báo cáo dài trên 5 trang)
-% \tableofcontents
-% \newpage
+% Mục lục (Mặc định bật đồng bộ với Typst)
+\tableofcontents
+\newpage
 
 % Các chương nội dung mẫu
 \input{chapter/01_intro}
 \input{chapter/02_summary}
 
-% Tài liệu tham khảo (Bỏ comment khi cần trích dẫn tài liệu)
+% Tài liệu tham khảo (Tùy chọn)
 % \nocite{*}
 % \printbibliography[title={Tài liệu tham khảo}]
 
