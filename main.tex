@@ -7,23 +7,23 @@
 
 \begin{document}
 
-% Trang bìa
+% Trang bìa (Không tính số trang)
 \input{style/cover_page}
 
-% Đánh số trang (Bắt đầu từ mục lục)
+% Bắt đầu tính số trang từ trang nội dung đầu tiên (Trang 1 / 1)
 \pagenumbering{arabic}
 \setcounter{page}{1}
 
-% Mục lục
-\tableofcontents
-\newpage
+% Mục lục (Bỏ comment nếu báo cáo dài trên 5 trang)
+% \tableofcontents
+% \newpage
 
-% Các chương nội dung
+% Các chương nội dung mẫu
 \input{chapter/01_intro}
 \input{chapter/02_summary}
 
-% Tài liệu tham khảo
-\nocite{*}
-\printbibliography[title={Tài liệu tham khảo}]
+% Tài liệu tham khảo (Bỏ comment khi cần trích dẫn tài liệu)
+% \nocite{*}
+% \printbibliography[title={Tài liệu tham khảo}]
 
 \end{document}
