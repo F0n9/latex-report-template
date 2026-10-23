@@ -1,11 +1,6 @@
-% ==========================================
-% TRANG BÌA (COVER PAGE - ĐỒNG BỘ 100% VỚI TYPST)
-% ==========================================
-
 \begin{titlepage}
 \thispagestyle{empty}
 
-% Khung viền toàn trang (Full-page border image cách đều mép giấy 1cm giống Typst)
 \begin{tikzpicture}[remember picture, overlay]
     \node[inner sep=0pt] at (current page.center) {
         \includegraphics[width=\dimexpr\paperwidth-2cm\relax, height=\dimexpr\paperheight-2cm\relax]{assets/border.png}
@@ -15,32 +10,26 @@
 \begin{center}
     \vspace*{0.2cm}
     
-    % Tên Đại học và Trường
     {\fontsize{16pt}{20pt}\selectfont\bfseries \university \par}
     
     \vspace{0.3cm}
     
-    % Tên Khoa
     {\fontsize{14pt}{18pt}\selectfont\bfseries \faculty \par}
     
     \vspace{1.0cm}
     
-    % Logo trường (width 32%)
     \includegraphics[width=0.32\textwidth]{assets/logo.png}
     
     \vspace{1.1cm}
     
-    % Tiêu đề chính (Navy Blue #1E3778, 24pt)
     {\fontsize{24pt}{28pt}\selectfont\bfseries\color{titlecolor} \projecttitle \par}
     
     \vspace{0.4cm}
     
-    % Tiêu đề phụ (22pt)
     {\fontsize{22pt}{26pt}\selectfont\bfseries \projectsubtitle \par}
     
     \vfill
     
-    % Khung thông tin sinh viên và giảng viên (Width 82%, top/bottom rule 0.6pt)
     \begin{minipage}{0.82\textwidth}
         {\color{dividerline}\hrule height 0.6pt}
         \vspace{0.45cm}
@@ -62,7 +51,6 @@
     
     \vfill
     
-    % Thời gian và địa điểm nộp báo cáo
     {\fontsize{11pt}{14pt}\selectfont \submissiondate \par}
     \vspace*{0.2cm}
 \end{center}

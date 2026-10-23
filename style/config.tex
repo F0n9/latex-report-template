@@ -1,30 +1,22 @@
-% ==========================================
-% CẤU HÌNH GÓI VÀ ĐỊNH DẠNG (STYLE CONFIGURATION)
-% ==========================================
-
-% Tiếng Việt và Mã hóa ký tự
 \usepackage[utf8]{vietnam}
 \usepackage[utf8]{inputenc}
 \usepackage[vietnamese,english]{babel}
 \usepackage[T5,T1]{fontenc}
 
-% Phông chữ (Times New Roman tương đương trong LaTeX)
 \usepackage{mathptmx}
 \usepackage{amsmath}
 \usepackage{amssymb}
 
-% Bảng màu (Đồng bộ 100% với Typst theme.typ)
 \usepackage[table,xcdraw,svgnames]{xcolor}
-\definecolor{titlecolor}{HTML}{1E3778}   % Deep Navy Blue
-\definecolor{bodycolor}{HTML}{111111}    % Dark Charcoal Body
-\definecolor{softcolor}{HTML}{666666}    % Subdued Gray
-\definecolor{hfcolor}{HTML}{677CA6}      % Header/Footer Slate Blue
-\definecolor{hfrule}{HTML}{A5B4D6}       % Header/Footer Border Accent
-\definecolor{codebg}{HTML}{F7F7F7}       % Code Container Fill
-\definecolor{codeborder}{HTML}{D6D6D6}   % Code Container Stroke
-\definecolor{dividerline}{HTML}{A0A0A0}  % Metadata Box Divider
+\definecolor{titlecolor}{HTML}{1E3778}
+\definecolor{bodycolor}{HTML}{111111}
+\definecolor{softcolor}{HTML}{666666}
+\definecolor{hfcolor}{HTML}{677CA6}
+\definecolor{hfrule}{HTML}{A5B4D6}
+\definecolor{codebg}{HTML}{F7F7F7}
+\definecolor{codeborder}{HTML}{D6D6D6}
+\definecolor{dividerline}{HTML}{A0A0A0}
 
-% Thiết lập lề trang chuẩn A4 (2.5cm đều 4 cạnh giống Typst)
 \usepackage{geometry}
 \geometry{
     a4paper,
@@ -33,24 +25,20 @@
     footskip=25pt
 }
 
-% Căn chỉnh đoạn văn bản
 \usepackage{setspace}
 \setstretch{1.15}
 \setlength{\parindent}{1.2em}
 \setlength{\parskip}{0.4em}
 
-% Đồ họa và TikZ
 \usepackage{graphicx}
 \usepackage{tikz}
 \usetikzlibrary{calc, positioning}
 \usepackage{float}
 \usepackage{placeins}
 
-% Header và Footer
 \usepackage{fancyhdr}
 \usepackage{lastpage}
 
-% Định dạng tiêu đề các mục (Giống 100% Typst heading - Mỗi mục lớn tự động qua trang mới)
 \usepackage{titlesec}
 \newcommand{\sectionbreak}{\clearpage}
 \titleformat{\section}[block]
@@ -74,7 +62,6 @@
   {}
 \titlespacing*{\subsubsection}{0pt}{10pt}{6pt}
 
-% Định dạng Mục lục (TOC)
 \usepackage{tocloft}
 \renewcommand{\contentsname}{\hfill\fontsize{18pt}{22pt}\selectfont\bfseries\color{titlecolor}Mục lục\hfill}
 \renewcommand{\cftaftertoctitle}{\hfill}
@@ -85,11 +72,9 @@
 \cftsetindents{subsubsection}{4.2em}{3em}
 \setcounter{tocdepth}{3}
 
-% Chú thích bảng biểu và hình ảnh
 \usepackage{caption}
 \captionsetup{font={small,color=softcolor},labelfont={bf,color=softcolor}}
 
-% Định dạng khối mã nguồn (Code Block)
 \usepackage{listings}
 \lstset{
   basicstyle=\ttfamily\small\color{bodycolor},
@@ -107,7 +92,6 @@
   showstringspaces=false
 }
 
-% Siêu liên kết (Hyperlinks)
 \usepackage{hyperref}
 \hypersetup{
   colorlinks=true,
@@ -117,7 +101,6 @@
   urlcolor=titlecolor
 }
 
-% Trích dẫn tài liệu tham khảo (BibLaTeX)
 \usepackage{csquotes}
 \usepackage[backend=biber,style=numeric,sorting=none]{biblatex}
 \addbibresource{ref.bib}

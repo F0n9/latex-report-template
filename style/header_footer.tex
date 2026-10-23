@@ -1,29 +1,20 @@
-% ==========================================
-% TIÊU ĐỀ ĐẦU TRANG VÀ CHÂN TRANG (HEADER & FOOTER)
-% ==========================================
-
 \pagestyle{fancy}
-\fancyhf{} % Xóa toàn bộ header và footer mặc định
+\fancyhf{}
 
-% Cấu hình Header (Đồng bộ với Typst chic-header)
 \fancyhead[L]{\fontsize{10pt}{12pt}\selectfont\color{hfcolor}\textbf{FIT-HCMUS}}
 \fancyhead[R]{\fontsize{10pt}{12pt}\selectfont\color{hfcolor}\textbf{University of Science - VNUHCM}}
 
-% Cấu hình Footer (Đồng bộ với Typst chic-footer)
 \fancyfoot[L]{\fontsize{10pt}{12pt}\selectfont\color{hfcolor}\textbf{\department}}
 \fancyfoot[R]{\fontsize{10pt}{12pt}\selectfont\color{hfcolor}\textbf{\thepage\ / \pageref{LastPage}}}
 
-% Đường kẻ phân cách (Độ dày 0.6pt, màu #A5B4D6)
 \renewcommand{\headrulewidth}{0.6pt}
 \renewcommand{\footrulewidth}{0.6pt}
 \renewcommand{\headrule}{\hbox to\headwidth{\color{hfrule}\leaders\hrule height \headrulewidth\hfill}}
 \renewcommand{\footrule}{\hbox to\headwidth{\color{hfrule}\leaders\hrule height \footrulewidth\hfill}}
 
-% Khoảng cách an toàn
 \setlength{\headheight}{16pt}
 \setlength{\footskip}{25pt}
 
-% Trang plain (dùng cho trang đầu mục lục / trang bắt đầu)
 \fancypagestyle{plain}{
     \fancyhf{}
     \fancyfoot[L]{\fontsize{10pt}{12pt}\selectfont\color{hfcolor}\textbf{\department}}

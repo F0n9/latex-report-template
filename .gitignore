@@ -1,4 +1,3 @@
-# LaTeX temporary files
 *.aux
 *.log
 *.toc
@@ -19,10 +18,9 @@
 *.idx
 *.ind
 *.ilg
-
-# Editor/OS temporary files
 .DS_Store
 Thumbs.db
 .vscode/
 .idea/
 *.swp
+.agents/

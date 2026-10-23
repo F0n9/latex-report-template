@@ -5,7 +5,7 @@
 [![Format: A4](https://img.shields.io/badge/Format-A4-blue?style=flat-square)](main.pdf)
 [![Institution](https://img.shields.io/badge/Style-HCMUS-00599C?style=flat-square)](https://hcmus.edu.vn)
 
-A clean, modular, and publication-ready academic report template configured in LaTeX. 100% synchronized in layout, typography, palette, and metadata architecture with the modern Typst report template. Tailored for coursework, term projects, and technical theses at VNU-HCM University of Science (HCMUS) with out-of-the-box Vietnamese language and mathematical typesetting support.
+A clean, modular, and publication-ready academic report template configured in LaTeX. Synchronized in layout, typography, palette, and metadata architecture with the modern Typst report template. Tailored for coursework, term projects, and technical theses at VNU-HCM University of Science (HCMUS) with out-of-the-box Vietnamese language and mathematical typesetting support.
 
 ## Features
 
@@ -21,22 +21,22 @@ A clean, modular, and publication-ready academic report template configured in L
 ```text
 latex-report-template/
 ├── assets/
-│   ├── border.png          # Cover page border asset
-│   ├── logo.png            # Institutional logo
-│   └── preview.png         # Template sample preview
+│   ├── border.png
+│   ├── logo.png
+│   └── preview.png
 ├── chapter/
-│   ├── 01_intro.tex        # Introduction section
-│   └── 02_summary.tex      # Summary, math, and data tables
+│   ├── 01_intro.tex
+│   └── 02_summary.tex
 ├── style/
-│   ├── config.tex          # Package imports, font configurations, and styling
-│   ├── cover_page.tex      # Synchronized 1:1 cover page layout
-│   └── header_footer.tex   # Header and footer rules matching Typst
-├── metadata.tex            # Centralized project and author metadata
-├── main.tex                # Document root entry point
-├── ref.bib                 # Bibliography entries (BibLaTeX)
-├── main.pdf                # Pre-compiled sample output
+│   ├── config.tex
+│   ├── cover_page.tex
+│   └── header_footer.tex
+├── metadata.tex
+├── main.tex
+├── ref.bib
+├── main.pdf
 ├── .gitignore
-└── LICENSE                 # MIT License
+└── LICENSE
 ```
 
 ## Getting Started
@@ -54,10 +54,7 @@ Use with any standard TeX distribution or cloud compiler:
 Compile using `latexmk` or `pdflatex`:
 
 ```bash
-# Using latexmk (recommended: handles bibliography automatically)
 latexmk -pdf main.tex
-
-# Using pdflatex manually
 pdflatex main.tex
 biber main
 pdflatex main.tex
@@ -68,7 +65,6 @@ pdflatex main.tex
 All report parameters are centralized in `metadata.tex`. You do not need to edit layout or formatting files to configure your report:
 
 ```latex
-% Report Information
 \newcommand{\university}{ĐẠI HỌC QUỐC GIA THÀNH PHỐ HỒ CHÍ MINH \\ TRƯỜNG ĐẠI HỌC KHOA HỌC TỰ NHIÊN}
 \newcommand{\faculty}{KHOA CÔNG NGHỆ THÔNG TIN}
 \newcommand{\department}{[Tên Bộ Môn / Chuyên Ngành]}
@@ -77,14 +73,12 @@ All report parameters are centralized in `metadata.tex`. You do not need to edit
 \newcommand{\projecttitle}{BÁO CÁO MÔN HỌC}
 \newcommand{\projectsubtitle}{[Tên Đề Tài Báo Cáo]}
 
-% Student and Instructor Information
 \newcommand{\classname}{[Lớp sinh hoạt / Mã lớp]}
 \newcommand{\authorname}{[Họ và tên sinh viên]}
 \newcommand{\authorid}{[Mã số sinh viên]}
 \newcommand{\authoremail}{[Địa chỉ email]}
 \newcommand{\instructorname}{[Họ và tên Giảng viên hướng dẫn]}
 
-% Submission Details
 \newcommand{\submissiondate}{Thành phố Hồ Chí Minh, ngày [..] tháng [..] năm [..]}
 ```
 
